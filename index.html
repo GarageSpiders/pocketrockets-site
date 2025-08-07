@@ -7,12 +7,15 @@
   <title>PocketRockets™</title>
   <style>
     body {
-      font-family: 'Courier New', monospace;
-      background-color: #0b0b0b;
-      color: #f4f4f4;
-      margin: 0;
-      line-height: 1.6;
-    }
+    font-family: 'Courier New', monospace;
+    background-color: #111;
+    background-image: url('hazardlab-grunge-bg.png');
+    background-size: cover;
+    background-repeat: repeat;
+    color: #f4f4f4;
+    margin: 0;
+    line-height: 1.6;
+  }
     header {
       display: flex;
       justify-content: space-between;
@@ -158,6 +161,67 @@
   50% { transform: scale(1.2); opacity: 1; }
 }
 
+
+  body {
+    font-family: 'Courier New', monospace;
+    background-color: #000;
+    background-image: url('hazardlab-grunge-bg.png');
+    background-size: 400px;
+    background-repeat: repeat;
+    color: #f4f4f4;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  header {
+    background-color: #000000;
+    border-bottom: 4px solid #ffcc00;
+    padding: 1rem 2rem;
+    background-image: linear-gradient(45deg, #ffcc00 25%, transparent 25%), 
+                      linear-gradient(-45deg, #ffcc00 25%, transparent 25%),
+                      linear-gradient(45deg, transparent 75%, #ffcc00 75%),
+                      linear-gradient(-45deg, transparent 75%, #ffcc00 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    color: #00ff00;
+    text-shadow: 0 0 8px #00ff00, 0 0 16px #000;
+    text-transform: uppercase;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+    color: #ff5555;
+    font-weight: bold;
+    text-shadow: 0 0 5px #ff0000;
+  }
+
+  .product-card {
+    border: 2px dashed #ffcc00;
+    background-color: #111;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #00ff00aa;
+  }
+
+  h2 {
+    color: #ffcc00;
+    text-shadow: 0 0 4px #000;
+  }
+
+  footer {
+    background-color: #000;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 2px dashed #ffcc00;
+    color: #777;
+  }
+
 </style>
 </head>
 <body>
@@ -182,37 +246,45 @@
   </header>
 
   <!-- HOME -->
-  <section id="home" class="hero">
-    <h1>BLAST OFF. EVERY TIME.</h1>
-    <p>Performance smelling salts engineered for extreme intensity.</p>
-  </section>
+  <section id="home" class="hero" style="background-image: url('hazardlab-hero.jpg'); background-color: #1a1a1a;">
+    <h1 class="hero-title">WELCOME TO THE HAZARD LAB</h1>
+    <p class="tagline">Smell like danger. Perform like war.</p>
+  
+  <div class="product-card">
+    <img src="hazardlab-shirt.png" alt="Hazard Lab Tee" onclick="openModal(this.src)" />
+    <h2>HAZARD LAB TEE</h2>
+    <p>$28 – Limited Lab Uniform</p>
+  </div>
+</section>
 
-  <section class="product-grid">
-    <div class="product-card">
-      <img src="launchpad.png" alt="Launch Pad" />
-      <h2>Launch Pad</h2>
-      <p>$12 – Entry-Level</p>
-    </div>
-    <div class="product-card">
-      <img src="redline.png" alt="Redline" />
-      <h2>Redline</h2>
-      <p>$16 – Intermediate</p>
-    </div>
-    <div class="product-card">
-      <img src="overclocked.png" alt="Overclocked" />
-      <h2>Overclocked</h2>
-      <p>$20 – Insane</p>
-    </div>
-    <div class="product-card">
-      <img src="voidwalker.png" alt="Voidwalker" />
-      <h2>Voidwalker</h2>
-      <p>$24 – LIMITED</p>
-    </div>
-  </section>
+  
+<section class="product-grid">
+  <div class="product-card">
+    <img src="reactor-core.png" alt="REACTOR CORE" onclick="openModal(this.src)" />
+    <h2>REACTOR CORE</h2>
+    <p>$12 – Stabilized Entry Compound</p>
+  </div>
+  <div class="product-card">
+    <img src="fallout-red.png" alt="FALLOUT RED" onclick="openModal(this.src)" />
+    <h2>FALLOUT RED</h2>
+    <p>$16 – Combat Ready Formula</p>
+  </div>
+  <div class="product-card">
+    <img src="overdose-protocol.png" alt="OVERDOSE PROTOCOL" onclick="openModal(this.src)" />
+    <h2>OVERDOSE PROTOCOL</h2>
+    <p>$20 – Max Threshold Exposure</p>
+  </div>
+  <div class="product-card">
+    <img src="quantum-leak.png" alt="QUANTUM LEAK" onclick="openModal(this.src)" />
+    <h2>QUANTUM LEAK</h2>
+    <p>$24 – Blacklisted Prototype</p>
+  </div>
+</section>
+
 
   <!-- SCIENCE -->
   <section id="science">
-    <h2>🚀 The Science Behind the Blast</h2>
+    <h2>⚗️ FORMULATION LOGS</h2>
     <p><strong>This isn’t snake oil. This is chemistry.</strong><br>
     When you crack a PocketRocket, you’re not just getting hyped — you're triggering a physiological response that hits harder than your pre-workout ever could.</p>
 
@@ -237,7 +309,7 @@
 
   <!-- FAQ -->
   <section id="faq">
-    <h2>❓ Frequently Asked Questions</h2>
+    <h2>☣️ LAB PROTOCOL (FAQ)</h2>
 
     <h3>Are PocketRockets™ legal?</h3>
     <p>Absolutely. Our formulas use safe, over-the-counter ammonia-based compounds. Nothing banned. Nothing shady.</p>
