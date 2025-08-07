@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PocketRockets™</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #0b0b0b;
+      color: #f4f4f4;
+      margin: 0;
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #000;
+      border-bottom: 2px solid #ff2e63;
+    }
+    .logo {
+      height: 50px;
+    }
+    nav a {
+      color: #f4f4f4;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ff2e63;
+    }
+    section {
+      padding: 3rem 2rem;
+    }
+    .hero {
+      text-align: center;
+      background: #111;
+      background-image: url('pocketrockets-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #ff2e63;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+    .product-card {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      border: 1px solid #333;
+      border-radius: 6px;
+      text-align: center;
+    }
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .product-card img:hover {
+      transform: scale(1.05);
+    }
+    h2 {
+      color: #ff2e63;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      color: #fff;
+      margin-top: 2rem;
+    }
+    ul {
+      margin: 1rem 0 2rem 1.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      background-color: #000;
+      color: #777;
+    }
+  
+/* Animated Launch Intro */
+.intro-sequence {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIntro 3s ease-out 3.5s forwards;
+}
+
+.rocket-icon {
+  font-size: 3rem;
+  animation: pulse 1s infinite ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.intro-text p {
+  font-family: monospace;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff;
+  width: 0;
+  animation: typing 2s steps(14) forwards;
+}
+
+.blast {
+  opacity: 0;
+  animation: fadeIn 1s ease 2.2s forwards;
+  color: #ff2e63;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 14ch; }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes fadeIntro {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- ANIMATED LAUNCH INTRO -->
+  <div class="intro-sequence">
+    <div class="rocket-icon">🚀</div>
+    <div class="intro-text">
+      <p class="typewriter">POCKETROCKETS</p>
+      <p class="blast">BLAST OFF. EVERY TIME.</p>
+    </div>
+  </div>
+
+
+  <header>
+    <img src="pocketrockets-logo.png" alt="PocketRockets Logo" class="logo" />
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#science">Science</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <h1>BLAST OFF. EVERY TIME.</h1>
+    <p>Performance smelling salts engineered for extreme intensity.</p>
+  </section>
+
+  <section class="product-grid">
+    <div class="product-card">
+      <img src="launchpad.png" alt="Launch Pad" />
+      <h2>Launch Pad</h2>
+      <p>$12 – Entry-Level</p>
+    </div>
+    <div class="product-card">
+      <img src="redline.png" alt="Redline" />
+      <h2>Redline</h2>
+      <p>$16 – Intermediate</p>
+    </div>
+    <div class="product-card">
+      <img src="overclocked.png" alt="Overclocked" />
+      <h2>Overclocked</h2>
+      <p>$20 – Insane</p>
+    </div>
+    <div class="product-card">
+      <img src="voidwalker.png" alt="Voidwalker" />
+      <h2>Voidwalker</h2>
+      <p>$24 – LIMITED</p>
+    </div>
+  </section>
+
+  <!-- SCIENCE -->
+  <section id="science">
+    <h2>🚀 The Science Behind the Blast</h2>
+    <p><strong>This isn’t snake oil. This is chemistry.</strong><br>
+    When you crack a PocketRocket, you’re not just getting hyped — you're triggering a physiological response that hits harder than your pre-workout ever could.</p>
+
+    <h3>⚗️ What Actually Happens:</h3>
+    <ul>
+      <li>Ammonia vapor irritates the membranes in your nose and lungs.</li>
+      <li>This irritation triggers a reflex — your body <strong>gasps</strong>.</li>
+      <li><strong>Heart rate spikes. Adrenaline dumps. Brain lights up.</strong></li>
+      <li>You’re awake. You’re locked in. You’re <strong>ready to rip the f***ing bar in half.</strong></li>
+    </ul>
+
+    <h3>💥 Why Ours Hit Different:</h3>
+    <ul>
+      <li><strong>Sealed capsules.</strong> No weak whiffs — just max potency every time.</li>
+      <li><strong>Tiered formulas</strong> calibrated for your limit (and past it).</li>
+      <li>Engineered to last. Designed to smash. Pocket-sized to stash.</li>
+    </ul>
+
+    <h3>🧠 Is It Safe?</h3>
+    <p>Used properly, yes. Smelling salts have been around for over a century — we just gave them a <strong>launch sequence</strong>. Don’t abuse it. Respect the rocket.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <h2>❓ Frequently Asked Questions</h2>
+
+    <h3>Are PocketRockets™ legal?</h3>
+    <p>Absolutely. Our formulas use safe, over-the-counter ammonia-based compounds. Nothing banned. Nothing shady.</p>
+
+    <h3>How do I use it?</h3>
+    <p>Hold the capsule at arm’s length, crack it, bring it near your nose, and inhale. Don’t shove it into your face — these things are strong.</p>
+
+    <h3>Is this safe for daily use?</h3>
+    <p>Yes, but moderation is key. Use when you need to switch on — not just because it's fun to feel like you’ve been hit by lightning.</p>
+
+    <h3>Can I use it during competition?</h3>
+    <p>Check your federation or event rules. Most don’t ban ammonia salts, but always double-check to avoid disqualification.</p>
+
+    <h3>What makes PocketRockets™ different?</h3>
+    <p>We don’t do dusty jars or faded potency. Our single-use or resealable capsules are pressure-sealed for a fresh hit — every time.</p>
+
+    <h3>What if I have a medical condition?</h3>
+    <p>Talk to your doctor before use. Especially if you have respiratory, heart, or neurological conditions. This isn’t candy. It’s jet fuel.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 PocketRockets™. All rights reserved.</p>
+  </footer>
+
+
+<script>
+  setTimeout(() => {
+    const intro = document.querySelector('.intro-sequence');
+    if (intro) intro.style.display = 'none';
+  }, 4000);
+</script>
+
+</body>
+</html>
